@@ -50,6 +50,10 @@ app.post('/register', async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("API server is running");
+});
+
 // API to Login Student
 app.post('/login', async (req, res) => {
   try {
