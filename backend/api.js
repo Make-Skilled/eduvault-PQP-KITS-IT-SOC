@@ -17,7 +17,7 @@ app.use(cors());
 app.use('/uploads', express.static('uploads'));
 
 // MongoDB URI and Client Setup
-const uri = 'mongodb+srv://admin:Makeskilled0@atlascluster.fyj9jlk.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster'; // Your MongoDB connection string
+const uri = 'mongodb://127.0.0.1:17017/KITS-SOC-Eduvault'; // Your MongoDB connection string
 const client = new MongoClient(uri);
 const dbName = 'Eduvault';
 const collectionName = 'subjects';
