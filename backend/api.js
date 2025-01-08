@@ -7,7 +7,7 @@ const { insertSubject} = require('./subjectDB'); // Import the helper functions 
 const {findOne,insertOne} = require('./db')
 
 const app = express();
-const port = 3000;
+const port = 3005;
 
 // Middleware
 app.use(express.json());
