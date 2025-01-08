@@ -97,7 +97,7 @@
 
 <script>
   // API URL for fetching subjects
-const apiUrl = 'http://localhost:3000/shSubjects'; // Base URL of your API
+const apiUrl = 'https://kitseduvaltbackend.makeskilled.com/shSubjects'; // Base URL of your API
 
 const options = ["Syllabus", "Reference Textbooks", "Model Papers"];
 
@@ -171,7 +171,7 @@ function createActionButton(label, subject, option, actionType) {
   button.classList.add("action-btn");
 
   // Base path for file retrieval (ensure trailing slash for proper concatenation)
-  const basePath = "http://localhost:3000/";
+  const basePath = "https://kitseduvaltbackend.makeskilled.com/";
 
   let filePath = "";
   if (option === "Syllabus") {
