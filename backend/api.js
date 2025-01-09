@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 // Static file serving for uploaded files
-app.use('/uploads', express.static('uploads'));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MongoDB URI and Client Setup
 const uri = 'mongodb://127.0.0.1:17017/KITS-SOC-Eduvault'; // Your MongoDB connection string
