@@ -19,7 +19,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // MongoDB URI and Client Setup
 const uri = 'mongodb://127.0.0.1:17017/KITS-SOC-Eduvault'; // Your MongoDB connection string
 const client = new MongoClient(uri);
-const dbName = 'Eduvault';
+const dbName = 'KITS-SOC-Eduvault';
 const collectionName = 'subjects';
 
 // API to Register Student
@@ -96,9 +96,9 @@ app.post('/addSubject', upload, async (req, res) => {
   }
 
   // Get the file paths for the uploaded files
-  const syllabusPath = req.files['syllabus'] ? req.files['syllabus'][0].path : '';
-  const questionPapersPath = req.files['questionPapers'] ? req.files['questionPapers'][0].path : '';
-  const booksPath = req.files['books'] ? req.files['books'][0].path : '';
+  const syllabusPath = req.files['syllabus'] ? req.files['syllabus'][0] : '';
+  const questionPapersPath = req.files['questionPapers'] ? req.files['questionPapers'][0]: '';
+  const booksPath = req.files['books'] ? req.files['books'][0]: '';
 
   // If any file is missing, return an error response
   if (!syllabusPath || !questionPapersPath || !booksPath) {
